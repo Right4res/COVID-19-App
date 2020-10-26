@@ -457,6 +457,7 @@ server <- function(input, output, session) {
       scale_x_date(date_breaks = "1 month", date_minor_breaks = "1 week", date_labels="%b") +
       #scale_y_continuous(breaks = seq(0, 5000, 250)) +
       theme_light() +
+      coord_cartesian(xlim = c(date_model - 7, date_model_end + 7)) +
       theme(panel.grid.minor = element_blank(),
             legend.position = "bottom") +
       guides(color=guide_legend(nrow=2,byrow=TRUE)) +
